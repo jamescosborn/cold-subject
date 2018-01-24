@@ -7,8 +7,14 @@
 <body>
     <h2>Details</h2>
     <hr />
-    @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
-    $@Html.DisplayFor(model => model.Cost)
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
+
+    <p><strong>@Html.DisplayNameFor(model => model.Description):</strong></p>
+    <p>@Html.DisplayFor(model => model.Description)</p>
+
+    <p><strong>@Html.DisplayNameFor(model => model.Cost):</strong></p>
+    <p>$@Html.DisplayFor(model => model.Cost)</p>
+
     <p>@Html.ActionLink("Back to the King's court", "Index")</p>
 </body>
 </html>
