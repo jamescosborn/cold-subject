@@ -7,14 +7,33 @@
 <body>
     <h2>Edit</h2>
     <hr />
-    <h4>Edit this product: @Html.DisplayFor(model => model.Description)</h4>
+
+    <h4>Name:</h4>
+    @Html.DisplayFor(model => model.Name)
+
+    <h4>Description:</h4>
+    @Html.DisplayFor(model => model.Description)
+
+    <h4>Cost:</h4>
+    $@Html.DisplayFor(model => model.Cost)
+
+    <br />
+    <br />
+    <hr />
+    <h4>Edit this product:</h4>
 
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.ProductId)
 
-        @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)
+        <p>@Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)</p>
+
+        <p>@Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)</p>
+
+        <p>@Html.LabelFor(model => model.Cost)
+        @Html.EditorFor(model => model.Cost)</p>
 
         <input type="submit" value="Save" />
     }
