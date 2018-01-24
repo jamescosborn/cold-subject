@@ -1,0 +1,24 @@
+﻿@model ColdSubject.Models.Product
+
+<html>
+<head>
+    <title>Product List - Edit</title>
+</head>
+<body>
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this product: @Html.DisplayFor(model => model.Description)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.ProductId)
+
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+
+        <input type="submit" value="Save" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+
+</body>
+</html>
