@@ -16,7 +16,7 @@ namespace ColdSubject.Controllers
         public IActionResult Index()
         {
             List<Product> model = db.Products.ToList();
-            return View(db.Reviews.ToList());
+            return View(model);
         }
 
         public IActionResult Details(int id)
