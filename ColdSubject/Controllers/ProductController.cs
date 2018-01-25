@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ColdSubject.Models;
 
@@ -63,6 +64,22 @@ namespace ColdSubject.Controllers
         {
             var thisProduct = db.Products.FirstOrDefault(products => products.ProductId == id);
             db.Products.Remove(thisProduct);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult AddReview(int id)
+        {
+            Review review = new Review();
+            ViewBag.ProductId = id;
+            return View(review);
+        }
+
+        [HttpPost]
+        public IActionResult AddReview(Review review)
+        {
+            //ViewBag
+            db.Reviews.Add(review);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

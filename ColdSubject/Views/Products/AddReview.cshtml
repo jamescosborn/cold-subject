@@ -14,6 +14,8 @@
     <hr />
     @using (Html.BeginForm())
     {
+        Model.ProductId = ViewBag.ProductId;
+        @Html.HiddenFor(model => model.ProductId)
         <p>
             @Html.LabelFor(model => model.Author)
             @Html.TextBoxFor(model => model.Author)
@@ -28,7 +30,7 @@
             @Html.LabelFor(model => model.Rating)
             @Html.TextBoxFor(model => model.Rating)
         </p>
-        <input type="submit" value="Add new review" />
+        <input type="submit" value="AddReview" />
     }
     <p>@Html.ActionLink("Back to product list", "Index")</p>
 </body>
