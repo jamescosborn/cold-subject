@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "AddReview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model ColdSubject.Models.Review
+
+<html>
+<head>
+    <title>Add a new Review</title>
+</head>
+<body>
+    <h4>Add a new review</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <p>
+            @Html.LabelFor(model => model.Author)
+            @Html.TextBoxFor(model => model.Author)
+        </p>
+
+        <p>
+            @Html.LabelFor(model => model.ContentBody)
+            @Html.TextBoxFor(model => model.ContentBody)
+        </p>
+
+        <p>
+            @Html.LabelFor(model => model.Rating)
+            @Html.TextBoxFor(model => model.Rating)
+        </p>
+        <input type="submit" value="Add new review" />
+    }
+    <p>@Html.ActionLink("Back to product list", "Index")</p>
+</body>
+</html>
