@@ -17,7 +17,7 @@ namespace ColdSubject.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder
-                .UseMySql(@"Server=localhost;Port=3306;database=gbkingdom;uid=root;pwd=root;");
+                .UseMySql(@"Server=localhost;Port=3306;database=coldsubject;uid=root;pwd=root;");
 
 
         public ColdSubjectDbContext(DbContextOptions<ColdSubjectDbContext> options)

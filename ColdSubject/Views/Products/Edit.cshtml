@@ -1,4 +1,9 @@
-﻿@model ColdSubject.Models.Product
+﻿@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model ColdSubject.Models.Product
 
 <html>
 <head>
@@ -26,17 +31,23 @@
     {
         @Html.HiddenFor(model => model.ProductId)
 
-        <p>@Html.LabelFor(model => model.Name)
-        @Html.EditorFor(model => model.Name)</p>
+        <p>
+            @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+    </p>
 
-        <p>@Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)</p>
+    <p>
+        @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+</p>
 
-        <p>@Html.LabelFor(model => model.Cost)
-        @Html.EditorFor(model => model.Cost)</p>
+<p>
+    @Html.LabelFor(model => model.Cost)
+@Html.EditorFor(model => model.Cost)
+</p>
 
-        <input type="submit" value="Save" />
-    }
+<input type="submit" value="Save" />
+}
     <p>@Html.ActionLink("Back to list", "Index")</p>
 
 </body>
