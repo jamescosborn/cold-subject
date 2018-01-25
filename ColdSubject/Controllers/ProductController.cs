@@ -16,7 +16,7 @@ namespace ColdSubject.Controllers
         public IActionResult Index()
         {
             List<Product> model = db.Products.ToList();
-            return View(model);
+            return View(db.Reviews.ToList());
         }
 
         public IActionResult Details(int id)
@@ -66,5 +66,6 @@ namespace ColdSubject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
     }
 }
