@@ -8,9 +8,10 @@ using ColdSubject.Models;
 namespace ColdSubject.Migrations
 {
     [DbContext(typeof(ColdSubjectDbContext))]
-    partial class ColdSubjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180125175256_AddReviewsToProduct")]
+    partial class AddReviewsToProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
