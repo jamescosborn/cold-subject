@@ -84,5 +84,9 @@ namespace ColdSubject.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult ViewReviews()
+        {
+            return View(db.Reviews.Include(reviews => reviews.Product).ToList());
+        }
     }
 }

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<ColdSubject.Models.Review>
+
+<html>
+<head>
+    <title>Reviews for this product</title>
+</head>
+<body>
+    <h2>Reviews for this product</h2>
+        @foreach (var listReview in Model)
+        {
+            <p><strong>@Html.DisplayNameFor(modelReview => listReview.Rating):</strong></p>
+            <p>@Html.DisplayFor(modelReview => listReview.Rating)</p>
+
+            <p><strong>@Html.DisplayNameFor(modelReview => listReview.ContentBody):</strong></p>
+            <p>@Html.DisplayFor(modelReview => listReview.ContentBody)</p>
+
+            <p><strong>@Html.DisplayNameFor(modelReview => listReview.Author):</strong></p>
+            <p>@Html.DisplayFor(modelReview => listReview.Author)</p>
+        }
+    <p>@Html.ActionLink("Back to home", "Index")</p>
+</body>
+</html>
