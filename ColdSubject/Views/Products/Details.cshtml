@@ -23,6 +23,6 @@
     <hr />
 
     <p>@Html.ActionLink("Back", "Index")</p>
-    <p>@Html.ActionLink("See reviews", "ViewReviews")</p>
+    <p>@Html.ActionLink("See reviews", "ViewReviews", new { id = Model.ProductId } )</p>
 </body>
 </html>
