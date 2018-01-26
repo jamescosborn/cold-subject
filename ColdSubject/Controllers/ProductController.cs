@@ -13,7 +13,12 @@ namespace ColdSubject.Controllers
 {
     public class ProductsController : Controller
     {
-        private ColdSubjectDbContext db = new ColdSubjectDbContext();
+        public ProductsController(IProductRepository repo = null)
+        {
+            this.db = repo ?? new EFReviewRepository();
+        }
+
+        private IProductRepository db;
         public IActionResult Index()
         {
             List<Product> model = db.Products.ToList();
@@ -34,8 +39,7 @@ namespace ColdSubject.Controllers
         [HttpPost]
         public IActionResult Create(Product product)
         {
-            db.Products.Add(product);
-            db.SaveChanges();
+            db.Save(product);
             return RedirectToAction("Index");
         }
 
@@ -48,8 +52,7 @@ namespace ColdSubject.Controllers
         [HttpPost]
         public IActionResult Edit(Product product)
         {
-            db.Entry(product).State = EntityState.Modified;
-            db.SaveChanges();
+            db.Edit(product);
             return RedirectToAction("Index");
         }
 
@@ -63,8 +66,7 @@ namespace ColdSubject.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             var thisProduct = db.Products.FirstOrDefault(products => products.ProductId == id);
-            db.Products.Remove(thisProduct);
-            db.SaveChanges();
+            db.Remove(thisProduct);
             return RedirectToAction("Index");
         }
 
@@ -79,8 +81,7 @@ namespace ColdSubject.Controllers
         public IActionResult AddReview(Review review)
         {
             //ViewBag
-            db.Reviews.Add(review);
-            db.SaveChanges();
+            db.Save(review);
             return RedirectToAction("Index");
         }
 
