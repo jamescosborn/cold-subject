@@ -42,7 +42,6 @@ To start the website, you'll need the following:
 * Atom  
 * C#  
 * Visual Studio  
-* Ajax  
 * MAMP
 
 ## Scheduled Updates
