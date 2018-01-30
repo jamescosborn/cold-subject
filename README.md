@@ -1,14 +1,14 @@
 # Cold Subject  
-#### No affiliation with Hot Topic.  
+#### No affiliation with Hot Topic  
 
-Congratulations! The Web Design team at Manticore Corp. has decided to let you QA Test their newest website. Hot diggity dog, you are excited! Get a cup of hot coffee and settle in, because you're in for it.  
+Congratulations! The Web Design team at MantiCore have decided to let you QA Test their newest website. Hot diggity dog, you are excited! Get a cup of hot coffee and settle in, because it's gonna be brutal!  
 
 Cold Subject's new website has full functionality for:  
 * A landing page  
 * A list of Products  
-* Product details(4): ProductId, Cost, Description, Name  
+* Product details: __Cost__, __Description__, __Name__  
 * Users can add reviews to products  
-* Review details(5): ReviewId, Author, ContentBody, ProductId, Rating  
+* Review detail: __Author__, __ContentBody__, __Rating__  
 * Tests for products
 * Tests for reviews
 * Tests for controllers
@@ -20,17 +20,15 @@ Startup Instructions for the app.
 ### Technologies Used
 
 Git  
-github  
+GitHub  
 Atom  
+C#  
+Visual Studio  
+MAMP
 
 ## Scheduled Updates
 
-* Add Reviews to products
-* Product Tests  
-* Review Tests  
-* Controller Tests  
-
-Anything else?
+* None
 
 ## Known Bugs
 
@@ -38,7 +36,7 @@ Anything else?
 
 ## Contributors
 
-James Carl Osborn
+James Carl Osborn  
 jamescarlosborn@gmail.com  
 
 ## Project Specs
@@ -85,4 +83,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-* Thank you to my teachers, fellow students, friends, family and pets for your continued support and inspiration.  
+Thank you to my teachers, fellow students, friends, family and pets for your continued support and inspiration.  
