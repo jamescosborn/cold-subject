@@ -1,7 +1,7 @@
 # Cold Subject  
 #### No affiliation with Hot Topic  
 
-Congratulations! The Web Design team at MantiCorp have decided to let you QA Test their newest website: Cold Subject. Founded by Swiss fashion pioneers and brothers Marco and Bjorn Buchwalder, Cold Subject is a household name in Scandinavia. Now they're looking to make a big splash in the US. Selling everything from Dog Sleds to Folk Singer T Shirts, Cold Subject is bound to be the next big thing. Get a cup of coffee and settle in, because this is it!
+Congratulations! The Web Design team at MantiCorp have hired you to QA Test their newest website: Cold Subject. Founded by Swiss fashion pioneers and brothers Marco and Bjorn Buchwalder, Cold Subject is a household name in Scandinavia. Now they're looking to make a big splash in the US. Selling everything from Dog Sleds to Folk Singer T Shirts, Cold Subject is bound to be the next big thing. Get a cup of coffee and settle in, because this is it!
 
 Cold Subject's brand new website has full functionality for:  
 * A landing page  
