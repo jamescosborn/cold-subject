@@ -17,5 +17,14 @@ namespace ColdSubject.Models
         public int Rating { get; set; }
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
+
+        /// <summary>
+        /// validates review length
+        /// </summary>
+        /// <returns></returns>
+        public bool IsValid()
+        {
+            return ContentBody.Length < 256;
+        }
     }
 }

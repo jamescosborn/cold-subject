@@ -20,5 +20,12 @@ namespace ColdSubject.Models
         public int Cost { get; set; }
         public string Description { get; set; }
         public virtual ICollection <Review> Reviews { get; set; }
+
+        public double? AverageRating()
+        {
+            return Reviews?.Any() == true ? Reviews.Average(review => review.Rating) : default(double?);
+        }
     }
+
+
 }
