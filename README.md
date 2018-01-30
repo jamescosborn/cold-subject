@@ -1,9 +1,9 @@
 # Cold Subject  
 #### No affiliation with Hot Topic  
 
-Congratulations! The Web Design team at MantiCore have decided to let you QA Test their newest website. Hot diggity dog, you are excited! Get a cup of hot coffee and settle in, because it's gonna be brutal!  
+Congratulations! The Web Design team at MantiCorp have decided to let you QA Test their newest website. Hot dog, you are excited! Get a cup of coffee and settle in, because this is it!
 
-Cold Subject's new website has full functionality for:  
+Cold Subject's brand new website has full functionality for:  
 * A landing page  
 * A list of Products  
 * Product details: __Cost__, __Description__, __Name__  
@@ -15,16 +15,34 @@ Cold Subject's new website has full functionality for:
 
 ## Getting Started
 
-Startup Instructions for the app.
+To start the website, you'll need the following:
+
+* A command prompt (Terminal or GitBash recommended)
+* A web browser (Chrome recommended)
+* A local server environment (MAMP recommended)
+
+### Installation Steps
+
+1. In your command prompt, enter:  
+  `git clone https://github.com/jamescosborn/cold-subject.git`
+2. Start your SQL server on MAMP.
+3. Navigate to the folder with the .csproj in it and enter: `dotnet ef migrations add CodeReview`    
+followed by:  
+`dotnet ef database update  `
+4. Enter:  `dotnet run`
+5. In a web browser, navigate to http://localhost:5000 (if the command prompt displays a different local host number, enter that one)
 
 ### Technologies Used
 
-Git  
-GitHub  
-Atom  
-C#  
-Visual Studio  
-MAMP
+* Terminal  
+* Git  
+* GitHub   
+* Chrome  
+* Atom  
+* C#  
+* Visual Studio  
+* Ajax  
+* MAMP
 
 ## Scheduled Updates
 
