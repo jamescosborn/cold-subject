@@ -32,7 +32,7 @@ MAMP
 
 ## Known Bugs
 
-* No known bugs at this time.
+* Multiple test folders appear in the project solution.
 
 ## Contributors
 
